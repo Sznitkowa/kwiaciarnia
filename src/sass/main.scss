@@ -100,7 +100,7 @@ textarea {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 		background-color: colors.$main-color;
 		transform: translateX(-100%);
 		transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -143,12 +143,14 @@ textarea {
 			background-color: colors.$pure-white;
 			transform: scaleX(0);
 			transform-origin: right;
-			transition: transform 0.3s;
+			opacity: 0;
+			transition: transform 0.3s, opacity 0.1s;
 		}
 
 		&:hover::after {
 			transform: scaleX(1);
 			transform-origin: left;
+			opacity: 1;
 		}
 	}
 
@@ -248,6 +250,7 @@ textarea {
 		font-size: 6.9rem;
 		font-weight: lighter;
 		text-align: center;
+		line-height: 70px;
 	}
 
 	&__box-text {
@@ -275,7 +278,7 @@ textarea {
 	&__btn {
 		position: absolute;
 		width: 85%;
-		margin-top: 5em;
+		margin-top: 2em;
 		padding: 1em 2em;
 		font-size: 1.6rem;
 		text-transform: uppercase;
@@ -314,6 +317,7 @@ textarea {
 	&__arrow {
 		position: absolute;
 		bottom: 40px;
+		margin-top: 2em;
 		left: 50%;
 		font-size: 5rem;
 		text-decoration: none;
@@ -397,7 +401,7 @@ textarea {
 }
 
 .between-section--first {
-	background-image: url('../img/between1-big.jpg');
+	background-image: url('../img/between1-small.jpg');
 }
 
 .offer {
@@ -478,22 +482,19 @@ textarea {
 
 	&__bouquets {
 		scroll-margin-top: 130px;
-		height: 50vh;
 	}
 
 	&__decorations {
 		scroll-margin-top: 130px;
-		height: 50vh;
 	}
 
 	&__wedding {
 		scroll-margin-top: 130px;
-		height: 50vh;
 	}
 }
 
 .between-section--second {
-	background-image: url('../img/between2-big.jpg');
+	background-image: url('../img/between2-small.jpg');
 }
 
 .workshops {
@@ -512,7 +513,6 @@ textarea {
 		text-align: center;
 		margin: 2em 3em;
 		font-size: 2rem;
-		// text-transform: uppercase;
 
 		i {
 			margin-bottom: 0.2em;
@@ -578,13 +578,12 @@ textarea {
 }
 
 .between-section--third {
-	background-image: url('../img/between3-big.jpg');
+	background-image: url('../img/between3-small.jpg');
 }
 
 .reviews {
 	padding: 4em 2em 0 2em;
 	scroll-margin-top: 60px;
-	height: 100vh;
 	background-color: colors.$light-green;
 
 	.section-heading {
@@ -649,17 +648,13 @@ textarea {
 }
 
 .between-section--fourth {
-	background-image: url('../img/between4-big.jpg');
+	background-image: url('../img/between4-small.jpg');
 }
 
 .contact {
 	padding: 4em 2em 0 2em;
 	scroll-margin-top: 60px;
-	height: 100vh;
 	position: relative;
-	// background-image: url('../img/contact-big.png');
-	// background-size: cover;
-	margin-bottom: 450px;
 
 	.section-heading {
 		margin-bottom: 2.5em;
@@ -709,7 +704,6 @@ textarea {
 
 		.box-btn {
 			display: flex;
-			// justify-content: center;
 			justify-content: flex-end;
 		}
 
@@ -736,12 +730,10 @@ textarea {
 	}
 
 	iframe {
-		position: absolute;
-		// bottom: -70px;
-		bottom: -49%;
+		position: relative;
 		left: 0;
-		margin-bottom: 3.2em;
-		width: 100%;
+		right: 0;
+		width: 100vw;
 	}
 }
 
@@ -835,6 +827,8 @@ textarea {
 		margin: 1em 2em;
 		font-size: 3.5rem;
 		font-family: 'Sacramento', cursive;
+		text-decoration: none;
+		color: colors.$black;
 
 		i {
 			color: colors.$dark-green;
@@ -865,7 +859,6 @@ textarea {
 		transition: color 0.3s;
 
 		&:hover {
-			// color: colors.$bg-darker-color;
 			color: colors.$dark-green;
 		}
 	}
@@ -929,9 +922,11 @@ textarea {
 
 		&__heading {
 			font-size: 9rem;
+			line-height: 100px;
 		}
 
 		&__btn {
+			margin-top: 5em;
 			font-size: 1.9rem;
 		}
 	}
@@ -949,6 +944,10 @@ textarea {
 			height: auto;
 			border: 13px solid colors.$pure-white;
 		}
+	}
+
+	.between-section--first {
+		background-image: url('../img/between1-big.jpg');
 	}
 
 	.offer {
@@ -981,18 +980,10 @@ textarea {
 		&__box-text {
 			width: 400px;
 		}
+	}
 
-		&__bouquets {
-			height: 70vh;
-		}
-
-		&__decorations {
-			height: 70vh;
-		}
-
-		&__wedding {
-			height: 70vh;
-		}
+	.between-section--second {
+		background-image: url('../img/between2-big.jpg');
 	}
 
 	.workshops {
@@ -1014,6 +1005,10 @@ textarea {
 		}
 	}
 
+	.between-section--third {
+		background-image: url('../img/between3-big.jpg');
+	}
+
 	.reviews {
 		padding: 4em;
 
@@ -1029,6 +1024,10 @@ textarea {
 			margin-top: 4em;
 			margin-bottom: 0;
 		}
+	}
+
+	.between-section--fourth {
+		background-image: url('../img/between4-big.jpg');
 	}
 
 	.contact {
@@ -1119,18 +1118,6 @@ textarea {
 
 		&__box-text {
 			width: 600px;
-		}
-
-		&__bouquets {
-			height: 80vh;
-		}
-
-		&__decorations {
-			height: 80vh;
-		}
-
-		&__wedding {
-			height: 80vh;
 		}
 	}
 
@@ -1242,18 +1229,6 @@ textarea {
 		&__box-text {
 			width: 700px;
 		}
-
-		&__bouquets {
-			height: 90vh;
-		}
-
-		&__decorations {
-			height: 90vh;
-		}
-
-		&__wedding {
-			height: 90vh;
-		}
 	}
 
 	.workshops {
@@ -1342,11 +1317,11 @@ textarea {
 
 		&__img {
 			position: relative;
-			top: -80px;
-			min-height: 650px;
-			max-height: 650px;
-			margin-top: 3em;
+			left: 0;
+			top: 0;
 			margin-left: 3em;
+			margin-top: 0;
+			height: 600px;
 		}
 	}
 
@@ -1370,18 +1345,6 @@ textarea {
 
 		&__box-text {
 			width: 800px;
-		}
-
-		&__bouquets {
-			height: 100vh;
-		}
-
-		&__decorations {
-			height: 100vh;
-		}
-
-		&__wedding {
-			height: 100vh;
 		}
 	}
 
