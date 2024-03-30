@@ -70,6 +70,11 @@ textarea {
 	position: relative;
 	display: flex;
 
+	&-mobile {
+		height: 0;
+		width: 0;
+	}
+
 	.nav-btn {
 		display: flex;
 		position: fixed;
@@ -351,7 +356,7 @@ textarea {
 }
 
 .about-us {
-	scroll-margin-top: 50px;
+	scroll-margin-top: -20px;
 	padding: 2em;
 
 	&__box {
@@ -405,7 +410,7 @@ textarea {
 }
 
 .offer {
-	scroll-margin-top: 20px;
+	scroll-margin-top: -20px;
 	background-color: colors.$light-green;
 
 	&__box-text {
@@ -481,15 +486,15 @@ textarea {
 	}
 
 	&__bouquets {
-		scroll-margin-top: 130px;
+		scroll-margin-top: 60px;
 	}
 
 	&__decorations {
-		scroll-margin-top: 130px;
+		scroll-margin-top: 60px;
 	}
 
 	&__wedding {
-		scroll-margin-top: 130px;
+		scroll-margin-top: 60px;
 	}
 }
 
@@ -498,7 +503,7 @@ textarea {
 }
 
 .workshops {
-	scroll-margin-top: 40px;
+	scroll-margin-top: -40px;
 
 	&__box-icons {
 		display: flex;
@@ -583,7 +588,7 @@ textarea {
 
 .reviews {
 	padding: 4em 2em 0 2em;
-	scroll-margin-top: 60px;
+	scroll-margin-top: -20px;
 	background-color: colors.$light-green;
 
 	.section-heading {
@@ -653,7 +658,7 @@ textarea {
 
 .contact {
 	padding: 4em 2em 0 2em;
-	scroll-margin-top: 60px;
+	scroll-margin-top: -20px;
 	position: relative;
 
 	.section-heading {
@@ -932,6 +937,7 @@ textarea {
 	}
 
 	.about-us {
+		scroll-margin-top: -50px;
 		padding: 4em;
 
 		&__box {
@@ -979,6 +985,18 @@ textarea {
 
 		&__box-text {
 			width: 400px;
+		}
+
+		&__bouquets {
+			scroll-margin-top: 80px;
+		}
+
+		&__decorations {
+			scroll-margin-top: 80px;
+		}
+
+		&__wedding {
+			scroll-margin-top: 80px;
 		}
 	}
 
@@ -1300,6 +1318,8 @@ textarea {
 	}
 
 	.about-us {
+		scroll-margin-top: 40px;
+
 		&__box {
 			padding: 3.2em 0;
 			height: 70vh;
@@ -1326,6 +1346,8 @@ textarea {
 	}
 
 	.offer {
+		scroll-margin-top: 20px;
+
 		&__card {
 			&-img {
 				border: 13px solid colors.$pure-white;
@@ -1348,7 +1370,13 @@ textarea {
 		}
 	}
 
+	.workshops {
+		scroll-margin-top: 40px;
+	}
+
 	.reviews {
+		scroll-margin-top: 60px;
+
 		&__cards {
 			height: 480px;
 		}
@@ -1362,6 +1390,10 @@ textarea {
 				font-size: 3.3rem;
 			}
 		}
+	}
+
+	.contact {
+		scroll-margin-top: 60px;
 	}
 }
 
