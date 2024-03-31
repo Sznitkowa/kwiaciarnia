@@ -53,7 +53,7 @@ textarea {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: scroll;
 }
 
 .wrapper {
@@ -898,6 +898,10 @@ textarea {
 //MEDIA QUERIES
 
 @media (min-width: 576px) {
+	.between-section {
+		background-attachment: fixed;
+	}
+
 	.nav {
 		.nav-btn {
 			font-size: 5rem;
